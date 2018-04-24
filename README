@@ -12,6 +12,5 @@
                       \__ \ (_|  __/ | | | | (__| |_| \__ \
                       |___/\___\___|_| |_|_|\___|\__,_|___/
                                       
-
-Salticus scenicus is a simple web crawler program written in python. It uses
-DJB's cdb database to store gathered addresses with their url as a key.
+Salticus scenicus is a simple multithreaded webcrawler written in Python3. It
+has support for onion and clearnet domains. 
