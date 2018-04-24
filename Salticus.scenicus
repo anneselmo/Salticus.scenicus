@@ -104,7 +104,7 @@ def countloop():
     global got_list, neo_list
     root=os.path.abspath(".")
     got_list = []
-    pre_list = ["https://www.indeed.com/q-Romanian-jobs.html", "http://www.jobsinbucharest.com/", "http://www.visahunter.com/articles/how-to-find-a-job-in-romania-as-a-foreigner/", "http://www.dreptonline.ro/resurse/resource.php", "http://www.romanianpassport.co.il/english/romanian-citizenship-law/"]
+    pre_list = [] #insert urls here, as a list of strings
     neo_list = pre_list
     i, rounds=0, 4 
     limit, threads=200000, 12
