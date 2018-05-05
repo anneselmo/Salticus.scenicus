@@ -58,8 +58,8 @@ def data_enter(url, database):
     else:
         database.add(bytes(url, 'utf-8'), page.content) #store binaries
         database.add(bytes("mt-"+url, 'utf-8'), bytes("xxx", 'utf-8')) #as we cant read the edit time there
-        del(page)
-        return(1)
+    del(page)
+    return(1)
 
 def findbaseurl(url): #find the url to append if links arent absolute
     return("{0.scheme}://{0.netloc}".format(urlsplit(url)))
