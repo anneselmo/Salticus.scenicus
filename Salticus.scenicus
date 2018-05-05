@@ -46,10 +46,12 @@ def data_enter(url, database):
     if scan.from_buffer(page.content).startswith('text'):
         soup=BeautifulSoup(page.content)
         database.add(bytes(url, 'utf-8'), bytes(str(soup.contents), 'utf-8'))
+        database.add(bytes("mt-"+url, 'utf-8'), soup.time.attrs['datetime'])
         del(page)
         return(soup)
     else:
         database.add(bytes(url, 'utf-8'), page.content) #store binaries
+        database.add(bytes("mt-"+url, 'utf-8') "xxx") #as we cant read the edit time there
         del(page)
         return(1)
 
